@@ -185,7 +185,9 @@ Project CSS
 
 /* Hero  */
 .hero {
-  min-height: 100vh;
+  min-height: 90vh;
+  display: grid;
+  place-items: center;
 }
 .hero--center {
   display: grid;
@@ -396,6 +398,37 @@ Project CSS
   color: var(--dark-grayish-blue);
 }
 
+@media (min-width: 800px) {
+  .service__img {
+    display: block;
+  }
+  /* .services {
+    padding: 0;
+  } */
+  .services__grid {
+    display: block;
+  }
+  .service {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* gap: 2rem; */
+    padding: 0;
+    box-shadow: none;
+  }
+  .service__body {
+    padding: 1rem;
+  }
+  .service__icon {
+    display: none;
+  }
+  .service__title {
+    border: none;
+    font-family: "Lora", serif;
+    font-size: 2rem;
+    color: var(--primary-2);
+  }
+}
+
 /* Footer  */
 .footer * {
   margin: 0;
@@ -419,34 +452,4 @@ Project CSS
 }
 .social__link svg {
   font-size: 1.5rem;
-}
-@media (min-width: 800px) {
-  .service__img {
-    display: block;
-  }
-  .services {
-    padding: 0;
-  }
-  .services__grid {
-    display: block;
-  }
-  .service {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    /* gap: 2rem; */
-    padding: 0;
-    box-shadow: none;
-  }
-  .service__body {
-    padding: 1rem;
-  }
-  .service__icon {
-    display: none;
-  }
-  .service__title {
-    border: none;
-    font-family: "Lora", serif;
-    font-size: 2rem;
-    color: var(--primary-2);
-  }
 }
