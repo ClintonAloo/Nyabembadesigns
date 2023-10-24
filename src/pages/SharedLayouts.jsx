@@ -4,7 +4,7 @@ const SharedLayouts = () => {
   return (
     <div>
       <Navbar />
-      {/* <Sidebar /> */}
+      <Sidebar />
       <Outlet />
       <Footer />
     </div>

@@ -184,6 +184,59 @@ Project CSS
   }
 }
 
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+  z-index: 10000000000000;
+  /* background-color: #fff; */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  transform: translateX(100%);
+  transition: var(--transition);
+}
+.sidebar--open {
+  transform: translateX(0);
+}
+.sidebar__see-through {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.sidebar__body {
+  background: #fff;
+  padding: 2rem;
+}
+.sidebar__header {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 3rem;
+}
+.sidebar__close {
+  background-color: transparent;
+  border: none;
+  transition: 0.3s;
+}
+.sidebar__close svg {
+  font-size: 1.5rem;
+}
+.sidebar__close:hover {
+  transform: rotate(90deg) scale(0.8);
+}
+.sidebar__link {
+  text-transform: capitalize;
+  letter-spacing: var(--letter-spacing);
+  transition: var(--transition);
+}
+.sidebar__link:hover {
+  padding-left: 0.5rem;
+}
+@media (min-width: 800px) {
+  .sidebar {
+    display: none;
+  }
+}
 /* Hero  */
 .hero {
   min-height: 90vh;
