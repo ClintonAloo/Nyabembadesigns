@@ -8,9 +8,9 @@ const App = () => {
         <Routes>
           <Route path="/" element={<SharedLayouts />}>
             <Route index element={<Home />} />
-            <Route path="/about" element={<h1>about</h1>} />
+            {/* <Route path="/about" element={<h1>about</h1>} />
             <Route path="/products" element={<h1>products</h1>} />
-            <Route path="/products/:id" element={<h1>single product</h1>} />
+            <Route path="/products/:id" element={<h1>single product</h1>} /> */}
           </Route>
           <Route path="*" element={<Error />} />
         </Routes>

@@ -2,6 +2,7 @@ import { useState } from "react";
 import { imageList } from "../utils";
 import { socialLinks } from "../utils";
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   const [currentImg, setCurrentImg] = useState(0);
@@ -72,7 +73,9 @@ const Hero = () => {
                 );
               })}
             </div>
-            <button className="btn btn--secondary">view products</button>
+            <Link to="/products" className="btn btn--secondary">
+              view products
+            </Link>
           </div>
         </div>
       </div>
