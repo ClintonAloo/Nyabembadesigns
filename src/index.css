@@ -423,6 +423,8 @@ Project CSS
     display: none;
   }
   .service__title {
+    display: block;
+    text-align: center;
     border: none;
     font-size: 2rem;
     color: var(--primary-2);
