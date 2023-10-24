@@ -5,7 +5,7 @@ const FeaturedProducts = () => {
   return (
     <section className="featured">
       <div className="content--center featured--center">
-        <Title title="featured products" />
+        <Title title="featured" />
         <div className="featured__grid">
           {products.slice(0, 3).map((product) => {
             return <Product key={product.id} {...product} />;
