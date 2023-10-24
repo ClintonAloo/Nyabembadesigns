@@ -356,7 +356,7 @@ Project CSS
 .services__grid {
   margin-top: 2rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
   gap: 1rem;
 }
 .service {
@@ -364,6 +364,9 @@ Project CSS
   box-shadow: var(--shadow-1);
   padding: 1rem;
   border-radius: 10px;
+}
+.service__img {
+  display: none;
 }
 .service__icon {
   display: flex;
@@ -390,6 +393,7 @@ Project CSS
 }
 .service__text {
   letter-spacing: var(--letter-spacing);
+  color: var(--dark-grayish-blue);
 }
 
 /* Footer  */
@@ -415,4 +419,34 @@ Project CSS
 }
 .social__link svg {
   font-size: 1.5rem;
+}
+@media (min-width: 800px) {
+  .service__img {
+    display: block;
+  }
+  .services {
+    padding: 0;
+  }
+  .services__grid {
+    display: block;
+  }
+  .service {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* gap: 2rem; */
+    padding: 0;
+    box-shadow: none;
+  }
+  .service__body {
+    padding: 1rem;
+  }
+  .service__icon {
+    display: none;
+  }
+  .service__title {
+    border: none;
+    font-family: "Lora", serif;
+    font-size: 2rem;
+    color: var(--primary-2);
+  }
 }

@@ -8,8 +8,8 @@ const Services = () => {
       <div className="content--center services--center">
         <Title title="services" />
         <div className="services__grid">
-          {services.map((service) => {
-            return <Service key={service.id} {...service} />;
+          {services.map((service, index) => {
+            return <Service key={service.id} {...service} index={index} />;
           })}
         </div>
       </div>
