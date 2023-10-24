@@ -9,6 +9,11 @@
   --soft-red-accent: #b34747;
   --dark-grayish-blue: hsl(236, 13%, 42%);
   --light-gray: #f8fafc;
+  --clr-gradient: linear-gradient(
+    to right,
+    var(--soft-red-accent),
+    var(--primary-2)
+  );
 
   /* Other Variables */
   --letter-spacing: 1px;
@@ -121,11 +126,7 @@ button {
   margin: 0 auto;
 }
 .logo {
-  background: linear-gradient(
-    to right,
-    var(--soft-red-accent),
-    var(--primary-2)
-  );
+  background: var(--clr-gradient);
   -webkit-background-clip: text;
   color: transparent;
   font-size: 1.5rem;
@@ -134,13 +135,8 @@ button {
 }
 
 .title {
-  text-align: center;
   text-transform: capitalize;
-  background: linear-gradient(
-    to right,
-    var(--soft-red-accent),
-    var(--primary-2)
-  );
+  background: var(--clr-gradient);
   -webkit-background-clip: text;
   color: transparent;
 }
@@ -191,12 +187,11 @@ Project CSS
   left: 0;
   width: 100%;
   min-height: 100vh;
-  z-index: 10000000000000;
-  /* background-color: #fff; */
   display: grid;
   grid-template-columns: 1fr 1fr;
   transform: translateX(100%);
   transition: var(--transition);
+  z-index: 10000000000000;
 }
 .sidebar--open {
   transform: translateX(0);
@@ -236,6 +231,9 @@ Project CSS
   .sidebar {
     display: none;
   }
+  .title {
+    text-align: center;
+  }
 }
 /* Hero  */
 .hero {
@@ -249,11 +247,9 @@ Project CSS
 }
 .hero__carousel {
   position: relative;
-  border-radius: 10px;
+  border-radius: 3px;
   overflow: hidden;
   height: 500px;
-  /* border: 1px solid black; */
-  /* transition: var(--transition); */
 }
 .carousel__img {
   position: absolute;
@@ -261,11 +257,9 @@ Project CSS
   bottom: 0;
   left: 0;
   height: 100%;
-  /* transition: var(--transition); */
 }
 .carousel__buttons {
   position: absolute;
-  /* border: 1px solid black; */
   display: flex;
   gap: 0.5rem;
   bottom: 2rem;
@@ -280,11 +274,7 @@ Project CSS
   border-radius: 50%;
 }
 .carousel__btn--active {
-  background: linear-gradient(
-    to right,
-    var(--soft-red-accent),
-    var(--primary-2)
-  );
+  background: var(--clr-gradient);
   border: none;
 }
 .hero__title {
@@ -297,12 +287,7 @@ Project CSS
   letter-spacing: var(--letter-spacing);
   color: var(--dark-grayish-blue);
 }
-/* .hero__buttons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 5rem;
-} */
+
 .hero__links {
   display: flex;
   align-items: center;
@@ -326,11 +311,7 @@ Project CSS
   transition: var(--transition);
 }
 .hero__link:hover {
-  background: linear-gradient(
-    to right,
-    var(--soft-red-accent),
-    var(--primary-2)
-  );
+  background: var(--clr-gradient);
   border: none;
 }
 .hero__link:hover svg {
@@ -365,7 +346,7 @@ Project CSS
   transition: var(--transition);
 }
 .product:hover {
-  transform: scale(1.05);
+  transform: scale(1.02);
   box-shadow: var(--shadow-2);
 }
 .product__header {
@@ -373,7 +354,6 @@ Project CSS
 }
 .product__img {
   height: 100%;
-  /* border-radius: 5px; */
 }
 .product__body {
   padding: 1rem 0;
@@ -412,18 +392,20 @@ Project CSS
 .services__grid {
   margin-top: 2rem;
   display: grid;
-  /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
   gap: 1rem;
 }
 .service {
+  position: relative;
   background-color: #fff;
   box-shadow: var(--shadow-1);
   padding: 1rem;
   border-radius: 10px;
 }
+
 .service__img {
   display: none;
 }
+
 .service__icon {
   display: flex;
   align-items: center;
@@ -440,7 +422,6 @@ Project CSS
 }
 .service__title {
   margin-top: 1rem;
-  /* text-align: center; */
   text-transform: capitalize;
   letter-spacing: var(--letter-spacing);
   display: inline-block;
@@ -456,16 +437,13 @@ Project CSS
   .service__img {
     display: block;
   }
-  /* .services {
-    padding: 0;
-  } */
+
   .services__grid {
     display: block;
   }
   .service {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    /* gap: 2rem; */
     padding: 0;
     box-shadow: none;
   }
