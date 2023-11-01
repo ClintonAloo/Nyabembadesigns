@@ -7,6 +7,9 @@ import stampImgFive from "./assets/stamp-img-5.jpg";
 import stampImgSix from "./assets/stamp-img-6.jpg";
 import designImg from "./assets/design-image.jpg";
 import brandingImg from "./assets/branding-img.jpg";
+import profileOne from "./assets/profile-one.jpg";
+import profileTwo from "./assets/profile-two.jpg";
+import profileThree from "./assets/profile-three.jpg";
 import { AiOutlineAntDesign } from "react-icons/ai";
 import { MdOutlineBrandingWatermark } from "react-icons/md";
 import { BsBoxes } from "react-icons/bs";
@@ -67,4 +70,40 @@ export const socialLinks = [
   { id: nanoid(), icon: <BiLogoTwitter /> },
   { id: nanoid(), icon: <BiLogoInstagramAlt /> },
   { id: nanoid(), icon: <BiLogoFacebook /> },
+];
+
+export const teamProfile = [
+  {
+    id: nanoid(),
+    img: profileTwo,
+    name: "Marty Byrde",
+    role: "Founder / CEO",
+    socials: [
+      { id: nanoid(), icon: <BiLogoTwitter />, url: "#" },
+      { id: nanoid(), icon: <BiLogoInstagramAlt />, url: "#" },
+      { id: nanoid(), icon: <BiLogoFacebook />, url: "#" },
+    ],
+  },
+  {
+    id: nanoid(),
+    img: profileOne,
+    name: "Wendy Byrde",
+    role: "Head of Sales",
+    socials: [
+      { id: nanoid(), icon: <BiLogoTwitter />, url: "#" },
+      { id: nanoid(), icon: <BiLogoInstagramAlt />, url: "#" },
+      { id: nanoid(), icon: <BiLogoFacebook />, url: "#" },
+    ],
+  },
+  {
+    id: nanoid(),
+    img: profileThree,
+    name: "Wyatt Langmore",
+    role: "Head of Sales",
+    socials: [
+      { id: nanoid(), icon: <BiLogoTwitter />, url: "#" },
+      { id: nanoid(), icon: <BiLogoInstagramAlt />, url: "#" },
+      { id: nanoid(), icon: <BiLogoFacebook />, url: "#" },
+    ],
+  },
 ];

@@ -5,9 +5,9 @@ import { VscMenu } from "react-icons/vsc";
 import { useProductsContext } from "../context/ProductsProvider";
 
 const Navbar = () => {
-  const { openSidebar } = useProductsContext();
+  const { openSidebar, scroll } = useProductsContext();
   return (
-    <nav className="nav">
+    <nav className={scroll > 0 ? "nav nav--active" : "nav"}>
       <div className="content--center nav--center">
         <Logo />
         <ul className="nav__links">
