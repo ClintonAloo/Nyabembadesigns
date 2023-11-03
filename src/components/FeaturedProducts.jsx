@@ -7,9 +7,11 @@ const FeaturedProducts = () => {
       <div className="content--center featured--center">
         <Title title="featured" />
         <div className="featured__grid">
-          {products.slice(0, 3).map((product) => {
-            return <Product key={product.id} {...product} />;
-          })}
+          {products
+            .filter((product) => product.featured)
+            .map((product) => {
+              return <Product key={product.id} {...product} />;
+            })}
         </div>
       </div>
     </section>

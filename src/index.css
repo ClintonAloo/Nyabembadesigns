@@ -5,6 +5,7 @@
   --primary-1: #ee4266;
   --primary-2: #080357;
   --primary-3: #041b15;
+  --secondary-1: #cecddd;
   --soft-red: hsl(5, 85%, 63%);
   --soft-red-accent: #b34747;
   --dark-grayish-blue: hsl(236, 13%, 42%);
@@ -95,9 +96,16 @@ button {
   cursor: pointer;
 }
 
+hr {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  border-top: 1px solid var(--primary-2);
+}
+
 .btn {
   padding: 0.75rem 1.5rem;
-  background-color: var(--soft-red-accent);
+  background-color: var(--primary-1);
   border: none;
   border-radius: 3px;
   color: #fff;
@@ -106,19 +114,15 @@ button {
   transition: var(--transition);
 }
 .btn:hover {
-  background-color: var(--soft-red);
+  background-color: var(--soft-red-accent);
 }
 .btn--secondary {
   background-color: transparent;
-  color: var(--soft-red-accent);
-  border: 1px solid var(--soft-red-accent);
+  color: var(--primary-1);
+  border: 1px solid var(--primary-1);
 }
 .btn--secondary:hover {
-  background: linear-gradient(
-    to right,
-    var(--soft-red-accent),
-    var(--primary-2)
-  );
+  background-color: var(--primary-1);
   color: #fff;
   border: none;
 }
@@ -312,7 +316,7 @@ Project CSS
 }
 .hero__link {
   display: inline-block;
-  border: 1px solid var(--soft-red-accent);
+  border: 1px solid var(--primary-1);
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -323,12 +327,11 @@ Project CSS
 }
 .hero__link svg {
   font-size: 1.25rem;
-  color: var(--soft-red-accent);
+  color: var(--primary-1);
   transition: var(--transition);
 }
 .hero__link:hover {
-  background: var(--clr-gradient);
-  border: none;
+  background-color: var(--primary-1);
 }
 .hero__link:hover svg {
   color: #fff;
@@ -379,6 +382,7 @@ Project CSS
 }
 .product__title {
   text-align: center;
+  text-transform: capitalize;
   letter-spacing: 2px;
 }
 .product__btn {
@@ -577,6 +581,7 @@ Project CSS
 .card__title {
   white-space: nowrap;
   letter-spacing: var(--letter-spacing);
+  text-transform: capitalize;
   color: var(--primary-2);
 }
 
@@ -641,12 +646,171 @@ Project CSS
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: var(--primary-1);
-  box-shadow: var(--shadow-2);
+  border: 1px solid var(--primary-1);
+  transition: var(--transition);
+  color: var(--primary-1);
 }
 .profile__link svg {
   font-size: 1.25rem;
+}
+
+.profile__link:hover {
+  background-color: var(--primary-1);
   color: #fff;
+}
+
+/* ================ Products Page ================== */
+.products-page {
+  padding-top: 4rem;
+}
+
+.banner {
+  background-color: var(--primary-2);
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.8),
+      rgba(0, 0, 0, 0.7)
+    ),
+    url("/about-bg.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 15rem;
+  display: grid;
+  place-items: center;
+}
+.banner__link {
+  color: #fff;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+}
+.banner__link span {
+  color: var(--secondary-1);
+}
+.banner__link span:hover a {
+  transition: var(--transition);
+  color: var(--primary-1);
+}
+.products-page--center {
+  padding: 5rem 0;
+}
+.filters {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.filters__header {
+  margin-bottom: 1rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 0.5rem;
+}
+.filters__input,
+.filters__sort {
+  padding: 0.5rem 1rem;
+  background-color: transparent;
+  border: 1px solid var(--primary-2);
+  border-radius: 5px;
+  outline: none;
+}
+::placeholder {
+  letter-spacing: var(--letter-spacing);
+  text-transform: capitalize;
+  font-family: inherit;
+  color: var(--dark-grayish-blue);
+}
+.categories {
+  margin-bottom: 1rem;
+  display: flex;
+  /* justify-content: center; */
+  gap: 0.5rem;
+  white-space: nowrap;
+  overflow-x: auto;
+}
+.categories::-webkit-scrollbar {
+  width: 0;
+}
+
+.categories::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+.categories__title {
+  display: none;
+}
+.categories__btn {
+  padding: 0.5rem 1rem;
+  background-color: transparent;
+  border: 1px solid var(--primary-2);
+  border-radius: 3px;
+  color: var(--primary-2);
+  letter-spacing: var(--letter-spacing);
+  text-transform: capitalize;
+  transition: var(--transition);
+}
+.categories__btn--active {
+  background-color: var(--primary-2);
+  color: #fff;
+}
+.categories__btn:hover,
+.carousel__btn:focus {
+  background-color: var(--primary-2);
+  color: #fff;
+}
+.products {
+  display: grid;
+  /* padding: 2rem 0; */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+@media (min-width: 800px) {
+  .products-page {
+    padding-top: 6rem;
+  }
+  .products-page--center {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1rem;
+  }
+  .filters {
+    text-align: left;
+  }
+  .filters__header {
+    grid-template-columns: 1fr;
+    margin-bottom: 2rem;
+  }
+
+  .categories {
+    flex-direction: column;
+    margin-bottom: 2rem;
+  }
+  .categories__title {
+    display: block;
+    display: grid;
+    align-items: center;
+    grid-template-columns: auto 1fr;
+    gap: 0.75rem;
+  }
+  .categories__text {
+    color: var(--primary-2);
+    letter-spacing: var(--letter-spacing);
+    text-transform: capitalize;
+  }
+  .categories__btn {
+    color: var(--dark-grayish-blue);
+    padding-left: 0;
+    border: none;
+    text-align: left;
+    font-size: 1rem;
+  }
+  .categories__btn--active {
+    background-color: transparent;
+    color: var(--primary-1);
+  }
+  .categories__btn:hover,
+  .carousel__btn:focus {
+    background-color: transparent;
+    color: var(--primary-1);
+  }
 }
 /* Footer  */
 .footer * {

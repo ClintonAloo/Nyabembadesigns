@@ -8,6 +8,9 @@ import Footer from "./Footer";
 import OurStory from "./OurStory";
 import OurTeam from "./OurTeam";
 import Portfolio from "./Portfolio";
+import Banner from "./Banner";
+import Products from "./Products";
+import Filters from "./Filters";
 export {
   Navbar,
   Sidebar,
@@ -19,4 +22,7 @@ export {
   OurStory,
   OurTeam,
   Portfolio,
+  Banner,
+  Products,
+  Filters,
 };

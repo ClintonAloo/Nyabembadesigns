@@ -1,12 +1,13 @@
-import storyImg from "../assets/stamp-img-1.jpg";
+// import storyImg from "../assets/stamp-img-1.jpg";
 import Title from "./Title";
+import signage1 from "../assets/signage1.jpg";
 
 const OurStory = () => {
   return (
     <section className="story">
       <div className="content--center story--center">
         <div className="img__container">
-          <img className="story__img" src={storyImg} alt="" />
+          <img className="story__img" src={signage1} alt="" />
         </div>
         <div className="story__body">
           <Title title="Our Story" />
